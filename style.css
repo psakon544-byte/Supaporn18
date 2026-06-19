@@ -26,18 +26,20 @@ h2 {
     color: #ff69b4;
 }
 
-.project {
+.project {  
     background-color: #ffe5ec;
-    padding: 15
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 15px;
+}
   
-  
-;
     margin-top: 15;
     border-radius: 15;
 }
 
 ul li {
-    margin: 10 0;
+   
+    margin: 10px 0;
 }
 
 footer {
