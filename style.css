@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    /* เปลี่ยนเป็นสีดำ น้ำเงิน ฟ้า ผสมกัน */
+    background: linear-gradient(-45deg, #05050a, #0a192f, #172a45, #00b4d8, #0077b6);
+    background-size: 400% 400%;
+    animation: bgMove 12s ease infinite; /* ปรับให้เคลื่อนไหวสมูทขึ้น */
+    color: #e2e8f0; /* เปลี่ยนสีตัวอักษรหลักเป็นสีสว่างเพื่อให้ทับบนพื้นหลังเข้มได้ชัดเจน */
+}
+
+/* พื้นหลังเคลื่อนไหว */
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header {
+    /* เปลี่ยนแถบหัวข้อเป็นไล่เฉดสีน้ำเงินเข้มไปฟ้า */
+    background: linear-gradient(90deg, #0a192f, #0077b6);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    animation: fadeDown 1s ease;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 5px 0 0;
+    color: #90e0ef; /* สีฟ้าอ่อนเพิ่มความเด่น */
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    /* ปรับกล่องเนื้อหาเป็นสีโปร่งแสงโทนเข้ม เพื่อให้กลมกลืนกับพื้นหลังหลัง */
+    background: rgba(10, 25, 47, 0.85); 
+    border-radius: 12px;
+    border: 1px solid rgba(0, 180, 216, 0.2); /* เพิ่มเส้นขอบเรืองแสงเบาๆ */
+    box-shadow: 0 0 20px rgba(0, 119, 182, 0.3);
+    animation: fadeUp 1s ease;
+    transition: all 0.3s ease;
+}
+
+section:hover {
+    transform: scale(1.03);
+    /* เมื่อชี้จะเรืองแสงสีฟ้าสว่างขึ้น */
+    box-shadow: 0 0 30px rgba(0, 180, 216, 0.6);
+}
+
+h2 {
+    color: #00b4d8; /* เปลี่ยนหัวข้อใหญ่เป็นสีฟ้าสว่าง */
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    margin: 0 0 10px;
+    color: #90e0ef; /* เปลี่ยนหัวข้อโปรเจกต์เป็นสีฟ้าอ่อน */
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    /* แถบด้านล่างเป็นโทนน้ำเงินเข้มตัดฟ้า */
+    background: linear-gradient(90deg, #0a192f, #005f73);
+    color: white;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #00b4d8;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
